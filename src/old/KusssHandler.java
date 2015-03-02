@@ -204,7 +204,6 @@ public class KusssHandler {
         Calendar iCal = null;
 
         try {
-
             URL url = new URL(URL_GET_ICAL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setDoOutput(true);
@@ -490,8 +489,7 @@ public class KusssHandler {
             // add registered exams
             loadExams(c, exams);
         } catch (Exception e) {
-            Log.e(TAG, "getNewExamsByLvaNr", e);
-            Analytics.sendException(c, e, true);
+        	onHandleException(e, true);
             return null;
         }
         return exams;

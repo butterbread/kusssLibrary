@@ -18,6 +18,7 @@ public class Term implements Comparable<Term> {
 	
 	private final int year;
 	private final TermType type;
+	private boolean loaded = false;
 	
 	public Term(int year, TermType type) {
 		this.year = year;
@@ -50,5 +51,13 @@ public class Term implements Comparable<Term> {
 	public String toString() {
 		return String.format("%d%s", year, type.toString());
 	}
+
+    public boolean isLoaded() {
+        return loaded;
+    }
+
+    public void setLoaded(boolean mLoaded) {
+        this.loaded = mLoaded;
+    }
 	
 }
