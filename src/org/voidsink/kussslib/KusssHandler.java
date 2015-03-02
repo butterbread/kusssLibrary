@@ -20,4 +20,11 @@ public interface KusssHandler {
 	
 	public List<Exam> getExamsByCourse(List<Course> lvas); // old: getNewExamsByCourse
 	public List<Curricula> getCurricula(); // old: getStudies
+	
+	public void setExceptionListener(IExceptionListener listener);
+	
+	public static interface IExceptionListener {
+		public void onExceptionOccured(Exception e, boolean fatal);
+	}
+	
 }
