@@ -1,4 +1,5 @@
 package org.voidsink.kussslib;
+
 public interface Course {
 	public Term getTerm();
 	public int getSkz();
