@@ -1,3 +1,4 @@
+package org.voidsink.kussslib;
 import java.util.List;
 
 import net.fortuna.ical4j.data.CalendarBuilder;

@@ -1,3 +1,5 @@
+package org.voidsink.kussslib;
+
 import java.util.Date;
 
 

@@ -1,3 +1,4 @@
+package org.voidsink.kussslib;
 public class Term implements Comparable<Term> {
 
 	
