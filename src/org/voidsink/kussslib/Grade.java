@@ -27,4 +27,33 @@ public enum Grade {
     public boolean isPositive() {
         return isPositive;
     }
+    
+    
+    public static Grade parseGrade(String text) {
+        text = text.trim().toLowerCase();
+        if (text.equals("sehr gut")) {
+            return G1;
+        } else if (text.equals("gut")) {
+            return G2;
+        } else if (text.equals("befriedigend")) {
+            return G3;
+        } else if (text.equals("genügend")) {
+            return G4;
+        } else if (text.equals("nicht genügend")) {
+            return G5;
+        } else if (text.equals("mit erfolg teilgenommen")) {
+            return GET;
+        } else if (text.equals("bestanden")) {
+            return GB;
+        } else if (text.equals("mit auszeichnung bestanden")) {
+            return GAB;
+        } else {
+            return null;
+        }
+    }
+
+    public static Grade parseGradeType(int ordinal) {
+        return Grade.values()[ordinal];
+    }
 }
+

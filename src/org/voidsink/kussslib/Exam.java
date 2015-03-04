@@ -22,7 +22,7 @@ public interface Exam {
     public Date getDtEnd();
     public String getLocation();
     public String getTitle();
-    public int getSkz();
+    public int getCid();
     public String getDescription();
     public String getInfo();
     public boolean isRegistered();

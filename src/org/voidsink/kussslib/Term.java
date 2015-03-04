@@ -14,6 +14,16 @@ public class Term implements Comparable<Term> {
 		public String toString() {
 			return value;
 		}
+		
+		public static TermType parseTermType(String text) {
+			text = text.trim().toLowerCase();
+			if (text.equals("w")) {
+				return WINTER;
+			}
+			else {
+				return SUMMER;
+			}
+		}
 	};
 	
 	private final int year;

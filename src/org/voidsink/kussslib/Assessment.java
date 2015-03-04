@@ -9,10 +9,11 @@ public interface Assessment {
     public String getCourseId();
     public Grade getGrade();
 
-    public int getSkz();
+    public int getCid();
     public AssessmentType assessmentType();
     public String getClassCode();
     public double getEcts();
     public double getSws();
     public CourseType getCourseType();
 }
+

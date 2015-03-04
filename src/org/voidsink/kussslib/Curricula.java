@@ -4,7 +4,7 @@ import java.util.Date;
 public interface Curricula {
 
     public boolean isStandard();
-    public int getSkz();
+    public int getCid();
     public String getTitle();
     public boolean isSteopDone();
     public boolean isActive();

@@ -2,7 +2,7 @@ package org.voidsink.kussslib;
 
 public interface Course {
 	public Term getTerm();
-	public int getSkz();
+	public int getCid();
 	public String getClassCode();
 	public CourseType getCourseType();
 	public String getTitle();

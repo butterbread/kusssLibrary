@@ -23,9 +23,6 @@ import java.util.concurrent.TimeUnit;
 
 import net.fortuna.ical4j.data.CalendarBuilder;
 import net.fortuna.ical4j.model.Calendar;
-import old.Context;
-import old.ExamGrade;
-import old.GradeType;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -48,6 +45,15 @@ public class KusssHandlerImpl implements KusssHandler {
 	private String sessionId = "";
 	private IExceptionListener exceptionListener = null;
 
+	//TODO: Prüfen, ob die Patterns hier noch hineingehören
+    public static final String PATTERN_LVA_NR_WITH_DOT = "\\d{3}\\.\\w{3}";
+    public static final String PATTERN_LVA_NR = "\\d{3}\\w{3}";
+    public static final String PATTERN_TERM = "\\d{4}[swSW]";
+    public static final String PATTERN_LVA_NR_COMMA_TERM = "\\("
+            + PATTERN_LVA_NR + "," + PATTERN_TERM + "\\)";
+    public static final String PATTERN_LVA_NR_SLASH_TERM = "\\("
+            + PATTERN_LVA_NR + "\\/" + PATTERN_TERM + "\\)";
+    
 	private static final String URL_MY_LVAS = "https://www.kusss.jku.at/kusss/assignment-results.action";
 	private static final String URL_GET_TERMS = "https://www.kusss.jku.at/kusss/listmystudentlvas.action";
 	private static final String URL_GET_ICAL = "https://www.kusss.jku.at/kusss/ical-multi-sz.action";
